@@ -43,9 +43,8 @@ adviceApp.adviceInfo = () => {
 
 // Display advice/text by updating DOM
 adviceApp.adviceDisplay = (htmlElementNum, htmlElementText, resultObj) => {
-  // console.log(resultObj.id);
-  htmlElementNum.innerHTML = `Advice #${resultObj.id}`;
-  htmlElementText.innerHTML = `"${resultObj.advice}"`;
+  htmlElementNum.innerText = `Advice #${resultObj.id}`;
+  htmlElementText.innerText = `"${resultObj.advice}"`;
 };
 
 // Call adviceApp
