@@ -9,7 +9,6 @@ adviceApp.reset = document.querySelector("button");
 
 // Event listeners
 adviceApp.reset.addEventListener("click", (e) => {
-  e.preventDefault();
   adviceApp.adviceInfo();
 });
 
@@ -21,12 +20,9 @@ adviceApp.init = () => {
 // Fetch API data
 adviceApp.adviceInfo = () => {
   const apiURL = "https://api.adviceslip.com/advice";
-  // apiURL.search = new URLSearchParams({
-  // })
   fetch(apiURL)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.slip);
       adviceApp.adviceDisplay(
         adviceApp.adviceNum,
         adviceApp.adviceText,
